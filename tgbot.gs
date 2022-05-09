@@ -44,8 +44,9 @@ function doPost(e) {
   var username = contents.message.from.username;
   if (eventover){
     sendMessage(id,"Du kannst keine Schichten mehr übernehmen, vielen Dank für deine Unterstützung bei der Konferenz");
+    return;
   }
-  return;
+ 
   sendMessage(logGroup, username + "\n" + id + "\n\n" + contents.message.text); // makes log channel
   // id debug
   if (contents.message.text == "/id"){
